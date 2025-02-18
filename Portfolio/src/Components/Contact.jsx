@@ -25,7 +25,7 @@ const Contact = () => {
         className="space-y-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          Get In <span className="text-purple-500">Touch</span>
+          Get In <span className="text-green-600">Touch</span>
         </h2>
         
         <div className="max-w-2xl mx-auto">

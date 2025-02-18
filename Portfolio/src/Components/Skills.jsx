@@ -71,7 +71,7 @@ const Projects = () => {
         className="space-y-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          My <span className="text-purple-500">Projects</span>
+          My <span className="text-green-600">Projects</span>
         </h2>
         
         <div className="flex justify-center gap-4 pb-6">

@@ -13,7 +13,7 @@ const About = () => {
       className="space-y-8"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        About <span className="text-purple-500">Me</span>
+        About <span className="text-green-600">Me</span>
       </h2>
       
       <div className="grid md:grid-cols-2 gap-8 items-center">
