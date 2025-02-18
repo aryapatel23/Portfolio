@@ -6,6 +6,8 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
 import Skills from './Components/Skills'
+import Contact from './Components/Contact'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +18,7 @@ function App() {
      <Hero/>
      <About/>
      <Skills/>
+     <Contact/>
     </>
   )
 }
