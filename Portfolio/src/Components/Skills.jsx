@@ -46,7 +46,7 @@ const Skills = () => {
         className="space-y-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-center">
-          My <span className="text-purple-500">Skills</span>
+          My <span className="text-green-500">Skills</span>
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
