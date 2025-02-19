@@ -39,13 +39,13 @@ const Contact = () => {
                 id="name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2 bg-white rounded-lg border-1.5 focus:outline-none focus:border-2 focus:ring-2 "
+                className="w-full px-4 py-2 bg-white border-1 rounded-lg border-1.5 focus:outline-none focus:border-2 focus:ring-2 "
                 required
               />
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                 Email
               </label>
               <input
@@ -53,13 +53,13 @@ const Contact = () => {
                 id="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-2 bg-white rounded-lg focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 bg-white border-1 rounded-lg focus:outline-none focus:border-2 focus:ring-2"
                 required
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                 Message
               </label>
               <textarea
@@ -67,14 +67,14 @@ const Contact = () => {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows="5"
-                className="w-full px-4 py-2 bg-balck rounded-lg focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 bg-balck border-1 rounded-lg focus:outline-none focus:border-2 focus:ring-2"
                 required
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-purple-500 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-purple-600 transition-colors"
+              className="w-full px-6 py-3 bg-green-500 text-white rounded-lg flex items-center justify-center gap-2 hover:bg-green-600 transition-colors"
             >
               <Send className="h-5 w-5" />
               Send Message

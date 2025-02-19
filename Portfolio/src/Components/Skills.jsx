@@ -7,56 +7,104 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Convict - Job & Internship Portal',
-      description: 'A comprehensive platform connecting job seekers with opportunities.',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      category: 'fullstack',
-      links: {
-        github: 'https://github.com/aryapatel23/Convict',
-        live: '#',
-        docs: 'https://documenter.getpostman.com/view/39193097/2sAYX5JhHE'
+      "title": 'Convict - Job & Internship Portal',
+      "description": 'A comprehensive platform connecting job seekers with opportunities.',
+      "tech": ['React', 'Node.js', 'MongoDB'],
+      "category": 'fullstack',
+      "links": {
+        "github": 'https://github.com/aryapatel23/Convict',
+        "live": '#',
+        "docs": 'https://documenter.getpostman.com/view/39193097/2sAYX5JhHE',
+        "figma": 'https://www.figma.com/design/lgKV6f2QeXEJLsNeTOmfEM/project?node-id=0-1&t=we4BvWQcL2NWQM7E-1'
       }
     },
     {
-      title: 'Youtube',
-      description: 'A faithful recreation of youtube UI with modern web technologies.',
-      tech: ['React', 'Firebase'],
-      category: 'react',
-      links: {
-        github: 'https://github.com/aryapatel23/react_youtube',
-        live: 'http://react-youtubeav.netlify.app/'
+      "title": 'Youtube',
+      "description": 'A faithful recreation of youtube UI with modern web technologies.',
+      "tech": ['React'],
+      "category": 'react',
+      "links": {
+        "github": 'https://github.com/aryapatel23/react_youtube',
+        "live": 'http://react-youtubeav.netlify.app/'
       }
     },
     {
-      title: 'Amazon Clone',
-      description: 'E-commerce platform with full shopping functionality.',
-      tech: ['React', 'Node.js', 'Stripe'],
-      category: 'fullstack',
-      links: {
-        github: '#',
-        live: '#'
+      "title": 'Amazon Clone',
+      "description": 'E-commerce platform with full shopping functionality.',
+      "tech": ['Html', 'css'],
+      "category": 'static',
+      "links": {
+        "github": '#',
+        "live":'#'
       }
     },
     {
-      title: 'Spotify Clone',
-      description: 'A music streaming web app inspired by Spotify, built with React.',
-      tech: ['React', 'Node.js', 'Spotify API'],
-      category: 'fullstack',
-      links: {
-        github: '#',
-        docs: '#'
+      "title": 'Spotify Clone',
+      "description": 'A music streaming web app inspired by Spotify, built with React.',
+      "tech": ['React'],
+      "category": 'static',
+      "links": {
+        "github": '#',
+        "docs": '#'
       }
     },
     {
-      title: 'Figma Website',
-      description: 'A UI/UX design prototype created using Figma.',
-      tech: ['Figma'],
-      category: 'figma',
-      links: {
-        live: 'https://www.figma.com/file/example',
-        figma: 'https://www.figma.com/file/example'  
+      "title": "Instagram Clone",
+      "description": "A social media web app inspired by Instagram, built with React.",
+      "tech": ["Figma"],
+      "category": "figma",
+      "links": {
+        "figma": "https://www.figma.com/design/5OVYFlXAszrMxpf5dGtDoW/Instagram-Clone-(Community)?node-id=0-1&t=xXL38OBk1Oc8s6oV-1",
+      }
+    },
+    {
+      "title": "Flipkart One-Page Clone",
+      "description": "A single-page e-commerce UI inspired by Flipkart, built with React.",
+      "tech": ["Figma"],
+      "category": "figma",
+      "links": {
+        "figma": "https://www.figma.com/design/iQ0pmlDv14Sy1gRBMCh5Zn/FLIPKART?node-id=0-1&t=pYMfJ0zRAR9aWWYO-1",
+      }
+    },
+    {
+      "title": "Coding Gita",
+      "description": "A platform that provide education",
+      "tech": ["Figma"],
+      "category": "figma",
+      "links": {
+        "figma": "https://www.figma.com/design/HYqNDSEKgDosVPeIz5Qwoa/codinggita-clone?node-id=0-1&t=YuKllJgkLspl6vYM-1",
+      }
+    },
+    {
+      "title": "Games",
+      "description": "games unique designs",
+      "tech": ["Figma"],
+      "category": "figma",
+      "links": {
+        "figma": "https://www.figma.com/design/GuZJWC9w9IFImuqG4wuvpg/Untitled?node-id=0-1&t=JexzIcNkYTLWmXDb-1",
+      }
+    },
+    {
+      "title": "SIH",
+      "description": "Design first page for look",
+      "tech": ["Figma"],
+      "category": "figma",
+      "links": {
+        "figma": "https://www.figma.com/design/Z3MD449weH8aKg2BI0rdtL/SIH?node-id=0-1&t=mG1rF3AkEVSIz9ft-1",
+      }
+    },
+    {
+      "title": "Spotify Static Website",
+      "description": "A visually appealing static website inspired by Spotify, built with React.",
+      "tech": ["React"],
+      "category": "react",
+      "links": {
+        "github": "https://github.com/aryapatel23/react_spotify",
+        "live": "https://react-spotify-ashy.vercel.app/"
       }
     }
+    
+    
   ];
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.category === filter);
@@ -79,7 +127,7 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === category ? 'bg-purple-500 text-white' : 'bg-gray-700 text-gray-300'}`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === category ? 'bg-green-600 text-white' : 'bg-white-700 border-2 text-black-300'}`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>

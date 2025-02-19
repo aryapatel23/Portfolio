@@ -40,18 +40,10 @@ const About = () => {
             <p className="text-green-600">CGPA: 9.76 (1st Semester)</p>
           </div>
           
-          <div className="bg-white border-2 p-4 border-black-500 p-4 rounded-lg hover:shadow-md hover:shadow-green-500 transition-shadow">
-            <h4 className="font-semibold">Rai University</h4>
-            <p className="text-black-300">Computer Science Engineering</p>
-            <p className="text-green-600">CGPA: 9.76 (1st Semester)</p>
-          </div>
-          <div className="bg-white border-2 p-4 border-black-500 p-4 rounded-lg hover:shadow-md hover:shadow-green-500 transition-shadow">
-            <h4 className="font-semibold">Rai University</h4>
-            <p className="text-black-300">Computer Science Engineering</p>
-            <p className="text-green-600">CGPA: 9.76 (1st Semester)</p>
+    
           </div>
         </div>
-      </div>
+  
     </motion.div>
   </section>
   )
