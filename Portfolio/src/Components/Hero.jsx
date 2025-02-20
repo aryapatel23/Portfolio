@@ -1,11 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    
-      <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-[#F9F9F9]">
+    <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-[#F9F9F9]">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -41,6 +40,15 @@ const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </a>
           </div>
+          {/* Download Resume Button */}
+          <a 
+            href="https://drive.google.com/file/d/1oTLgFgCSCTNbQDZWGE9C9zubD2VRIry6/view" 
+            download 
+            className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+          >
+            <Download className="h-5 w-5" />
+            Download Resume
+          </a>
         </motion.div>
         
         <motion.div
@@ -60,8 +68,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-
   )
 }
 
-export default Hero
+export default Hero;
