@@ -34,7 +34,7 @@ const About = () => {
             <GraduationCap className="h-6 w-6" />
             <h3 className="text-xl font-semibold">Education</h3>
           </div>
-          <div className="bg-white border-2 border-black-500 p-4 rounded-lg hover:shadow-md hover:shadow-green-500 transition-shadow">
+          <div className="bg-white border-2 border-black-500 p-4 rounded-lg">
             <h4 className="font-semibold">Rai University</h4>
             <p className="text-black-100">Computer Science Engineering</p>
             <p className="text-green-600">CGPA: 9.76 (1st Semester)</p>
