@@ -102,7 +102,18 @@ const Projects = () => {
         "github": "https://github.com/aryapatel23/react_spotify",
         "live": "https://react-spotify-ashy.vercel.app/"
       }
+    },
+    {
+      "title": "Apna.co Clone",
+      "description": "A static job portal website inspired by Apna.co, built with React.",
+      "tech": ["Html","css"],
+      "category": "static",
+      "links": {
+        "github": "https://github.com/aryapatel23/Apna_clone",
+        "live": "https://apnaco.netlify.app/"
+      }
     }
+    
     
     
   ];
