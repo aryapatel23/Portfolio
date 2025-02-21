@@ -34,8 +34,8 @@ const Projects = () => {
       "tech": ['Html', 'css'],
       "category": 'static',
       "links": {
-        "github": '#',
-        "live":'#'
+        "github": 'https://github.com/aryapatel23/Amazon-clone',
+        "live":'https://amazo-nclone.netlify.app/'
       }
     },
     {
@@ -44,8 +44,7 @@ const Projects = () => {
       "tech": ['React'],
       "category": 'static',
       "links": {
-        "github": '#',
-        "docs": '#'
+        "github": 'https://github.com/aryapatel23/react_spotify',
       }
     },
     {
