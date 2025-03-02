@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, FileCode , Figma } from 'lucide-react';
+import { Github, ExternalLink, FileCode, Figma } from 'lucide-react';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -15,7 +15,8 @@ const Projects = () => {
         "github": 'https://github.com/aryapatel23/Convict',
         "live": '#',
         "docs": 'https://documenter.getpostman.com/view/39193097/2sAYX5JhHE',
-        "figma": 'https://www.figma.com/design/lgKV6f2QeXEJLsNeTOmfEM/project?node-id=0-1&t=we4BvWQcL2NWQM7E-1'
+        "figma": 'https://www.figma.com/design/lgKV6f2QeXEJLsNeTOmfEM/project?node-id=0-1&t=we4BvWQcL2NWQM7E-1',
+        "video": 'https://drive.google.com/file/d/1tNGJP6azgfnNupqGEpj01i4eO3U-WreZ/view?usp=sharing'
       }
     },
     {
@@ -35,7 +36,7 @@ const Projects = () => {
       "category": 'static',
       "links": {
         "github": 'https://github.com/aryapatel23/Amazon-clone',
-        "live":'https://amazo-nclone.netlify.app/'
+        "live": 'https://amazo-nclone.netlify.app/'
       }
     },
     {
@@ -105,16 +106,16 @@ const Projects = () => {
     {
       "title": "Apna.co Clone",
       "description": "A static job portal website inspired by Apna.co, built with React.",
-      "tech": ["Html","css"],
+      "tech": ["Html", "css"],
       "category": "static",
       "links": {
         "github": "https://github.com/aryapatel23/Apna_clone",
         "live": "https://apnaco.netlify.app/"
       }
     }
-    
-    
-    
+
+
+
   ];
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.category === filter);
@@ -131,19 +132,22 @@ const Projects = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           My <span className="text-green-600">Projects</span>
         </h2>
-        
+
+        {/* Filter Buttons */}
         <div className="flex justify-center gap-4 pb-6">
-          {['all', 'figma', 'static', 'react', 'fullstack'].map((category) => (
+          {['all', 'figma', 'static', 'react', 'fullstack'].map(category => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === category ? 'bg-green-600 text-white' : 'bg-white-700 border-2 text-black-300'}`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${filter === category ? 'bg-green-600 text-white' : 'bg-white-700 border-2 text-black-300'
+                }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
         </div>
 
+        {/* Project Cards */}
         <div className="grid md:grid-cols-2 gap-6">
           {filteredProjects.map((project, index) => (
             <motion.div
@@ -152,69 +156,79 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg overflow-hidden hover:shadow-md hover:shadow-balck-600 hover:border-2 transition-shadow"
+              className="bg-white rounded-lg overflow-hidden hover:shadow-md hover:shadow-black-600 hover:border-2 transition-shadow p-6"
             >
-              <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-black">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-black text-white rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Project Title */}
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-black">{project.description}</p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map(tech => (
+                  <span key={tech} className="px-3 py-1 bg-black text-white rounded-full text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Video Embed (if available) */}
+              {project.links.video && (
+                <div className="mt-4">
+                  <iframe
+                    src={`https://drive.google.com/file/d/${project.links.video.split('/d/')[1].split('/')[0]}/preview`}
+                    title={project.title}
+                    allow="autoplay"
+                    className="w-full h-56 rounded-lg"
+                  ></iframe>
                 </div>
-                
-                <div className="flex gap-4 pt-4">
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
-                    >
-                      <Github className="h-5 w-5" />
-                      <span>Code</span>
-                    </a>
-                  )}
-                  {project.links.live && (
-                    <a
-                      href={project.links.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-balck hover:text-green-500 transition-colors"
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                      <span>Live Demo</span>
-                    </a>
-                  )}
-                  {project.links.docs && (
-                    <a
-                      href={project.links.docs}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
-                    >
-                      <FileCode className="h-5 w-5" />
-                      <span>Docs</span>
-                    </a>
-                  )}
-                  {project.links.figma && (
-                    <a
-                      href={project.links.figma}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-balck hover:text-green-500 transition-colors"
-                    >
-                      <Figma className="h-5 w-5" />
-                      <span>Figma</span>
-                    </a>
-                  )}
-                </div>
+              )}
+
+              {/* Project Links */}
+              <div className="flex gap-4 pt-4">
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
+                  >
+                    <Github className="h-5 w-5" />
+                    <span>Code</span>
+                  </a>
+                )}
+                {project.links.live && (
+                  <a
+                    href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                    <span>Live Demo</span>
+                  </a>
+                )}
+                {project.links.docs && (
+                  <a
+                    href={project.links.docs}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
+                  >
+                    <FileCode className="h-5 w-5" />
+                    <span>Docs</span>
+                  </a>
+                )}
+                {project.links.figma && (
+                  <a
+                    href={project.links.figma}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-black hover:text-green-500 transition-colors"
+                  >
+                    <Figma className="h-5 w-5" />
+                    <span>Figma</span>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
@@ -222,6 +236,7 @@ const Projects = () => {
       </motion.div>
     </section>
   );
+
 };
 
 export default Projects;
