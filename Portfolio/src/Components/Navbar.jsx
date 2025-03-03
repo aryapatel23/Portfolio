@@ -14,25 +14,25 @@ const Navbar = () => {
             <Code2 className="h-8 w-8 text-green-500" />
             <span className="ml-2 text-xl font-bold">Arya Patel</span>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="px-3 py-2 rounded-md text-bold font-medium text-black-300 hover:text-white hover:bg-gray-700 transition-all"
+                  className="px-3 py-2 rounded-md font-medium text-black transition-all hover:bg-black hover:text-white"
                 >
                   {item}
                 </a>
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-black focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -48,7 +48,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                className="block px-3 py-2 rounded-md text-base font-medium text-black transition-all hover:bg-black hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {item}
