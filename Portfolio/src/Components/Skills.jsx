@@ -148,6 +148,13 @@ const skillCategories = [
 const Skills = () => {
   return (
     <section id="skills" className="py-20 mx-5">
+            {/* Animated Background */}
+            <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute inset-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"
+      />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
