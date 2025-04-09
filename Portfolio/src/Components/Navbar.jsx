@@ -115,7 +115,6 @@
 // export default Navbar;
 
 
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import GooeyNav from './GooeyNav.jsx'; // Import the GooeyNav component
@@ -130,7 +129,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black shadow-md">
       {/* Container for Navbar */}
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}

@@ -53,13 +53,13 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-[#F9F9F9] relative overflow-hidden">
+    <section id="skills" className="py-20 bg-black relative overflow-hidden">
       {/* Floating Particles Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {[...Array(30)].map((_, index) => (
           <motion.span
             key={index}
-            className="absolute inline-block w-1 h-1 rounded-full bg-green-300 opacity-70"
+            className="absolute inline-block w-1 h-1 rounded-full bg-white opacity-70"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -88,8 +88,8 @@ const Skills = () => {
           viewport={{ once: true }}
           className="space-y-12 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600 leading-tight">
-            My Skills
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white leading-tight">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Skills</span>
           </h2>
         </motion.div>
 

@@ -1,64 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react';
+import { Mail, MapPin, Download, Github, Linkedin } from 'lucide-react';
 import Typewriter from 'typewriter-effect';
 
-const Hero = () => {
+const HeroSection = () => {
   return (
-    <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-gray-50 relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="absolute inset-0 w-full h-full bg-gradient-to-br from-green-50 via-white to-green-100"
-      >
-        {/* Cubes Pattern Overlay */}
-        <div
-          className="absolute inset-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-70"
-        />
-      </motion.div>
+    <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+      {/* Unique Background */}
+      <div
+        className="absolute inset-0 w-full h-full bg-[url('https://res.cloudinary.com/dzsvjyg2c/image/upload/v1743840141857/bg-hero.jpg')] bg-cover bg-center bg-blend-overlay bg-black/50 z-0"
+      ></div>
 
       {/* Floating Particles */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(30)].map((_, index) => (
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {[...Array(20)].map((_, index) => (
           <motion.span
             key={index}
-            className="absolute inline-block w-1 h-1 rounded-full bg-green-300 opacity-70"
+            className="absolute inline-block w-1 h-1 rounded-full bg-white/70"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, Math.random() * 100 - 50, 0], // Moves up and down smoothly
-              x: [0, Math.random() * 100 - 50, 0], // Moves left and right smoothly
-              scale: [1, 1.5, 1], // Scales up and down
-              opacity: [0.7, 0.9, 0.7], // Fades in and out
+              y: [0, Math.random() * 50 - 25, 0],
+              x: [0, Math.random() * 50 - 25, 0],
+              scale: [1, 1.2, 1],
+              opacity: [0.7, 0.9, 0.7],
             }}
             transition={{
               repeat: Infinity,
-              duration: Math.random() * 5 + 3, // Randomized duration for variety
+              duration: Math.random() * 4 + 2,
               ease: "linear",
             }}
           />
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center relative z-10 px-6 max-w-7xl mx-auto">
-        {/* Left Section with Typing Animation */}
+      {/* Content Container */}
+      <div className="relative z-20 grid md:grid-cols-2 gap-16 items-center px-6 max-w-7xl mx-auto">
+        {/* Left Section: Introduction */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="space-y-8"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
             Hi, I'm{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">
               Arya Patel
             </span>
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-600 font-medium">
+          <h2 className="text-2xl md:text-3xl text-gray-300 font-medium">
             <Typewriter
               options={{
                 strings: ['Web Developer', 'Problem Solver', 'UI/UX Enthusiast'],
@@ -68,7 +61,7 @@ const Hero = () => {
               }}
             />
           </h2>
-          <div className="space-y-4 text-gray-600">
+          <div className="space-y-4 text-gray-400">
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-green-500" />
               <span className="text-sm md:text-base">aryapatel.cg@gmail.com</span>
@@ -77,43 +70,38 @@ const Hero = () => {
               <MapPin className="h-5 w-5 text-green-500" />
               <span className="text-sm md:text-base">Gujarat, India</span>
             </div>
-          </div>
-          {/* Social Icons with Hover Effects */}
-          <div className="flex gap-4 mt-4">
-            <a
-              href="https://github.com/aryapatel23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110"
-            >
-              <Github className="h-6 w-6 text-green-500" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/arya-patel-profile/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110"
-            >
-              <Linkedin className="h-6 w-6 text-green-500" />
-            </a>
+            <div className="flex space-x-4 text-black">
+                        <a href="https://github.com/aryapatel23" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-green-500 transition-colors">
+                            <Github className="h-6 w-6" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/arya-patel-profile/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-green-500 transition-colors">
+                            <Linkedin className="h-6 w-6" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/arya-patel-profile/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-green-500 transition-colors">
+                            <Mail className="h-6 w-6" />
+                        </a>
+                    </div>
           </div>
           {/* Download Resume Button */}
           <a
             href="https://drive.google.com/uc?export=download&id=1oTLgFgCSCTNbQDZWGE9C9zubD2VRIry6"
-            className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+            download="Arya_Patel_Resume.pdf"
+            aria-label="Download Arya Patel's resume"
           >
             <Download className="h-5 w-5" />
             Download Resume
           </a>
-
         </motion.div>
 
-        {/* Right Section - Floating 3D Profile Image */}
+        {/* Right Section: Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           whileHover={{ scale: 1.05 }}
+          whileInView={{ translateY: [-20, 0] }}
+          viewport={{ once: true }}
           className="relative"
         >
           <div className="w-64 h-64 md:w-80 md:h-80 mx-auto relative rounded-full overflow-hidden shadow-2xl border-4 border-green-500">
@@ -142,4 +130,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

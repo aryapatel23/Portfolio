@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#F9F9F9] py-8">
+        <footer className="bg-black py-8">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center space-y-4">
                     <div className="flex space-x-4">
@@ -17,7 +17,7 @@ const Footer = () => {
                             <Mail className="h-6 w-6" />
                         </a>
                     </div>
-                    <p className="text-black-400 text-sm">
+                    <p className="text-white text-sm">
                         © {new Date().getFullYear()} Arya Patel. All rights reserved.
                     </p>
                 </div>
