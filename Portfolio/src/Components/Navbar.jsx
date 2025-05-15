@@ -140,7 +140,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600"
         >
-          MyPortfolio
+          AP
         </motion.div>
 
         {/* Desktop GooeyNav */}
