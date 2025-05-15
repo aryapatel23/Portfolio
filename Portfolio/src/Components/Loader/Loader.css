@@ -1,0 +1,102 @@
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-container {
+  text-align: center;
+  color: #00FF7F;
+  padding: 2rem;
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Floating animation for icon */
+.loader-icon {
+  animation: float 2.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 127, 0.6));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Loader text styling */
+.loader-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: transparent; /* Make text invisible */
+  background-image: linear-gradient(to right, #00FF7F, #00FFB3); /* Green gradient */
+  background-clip: text; /* Apply gradient to text */
+  -webkit-background-clip: text; /* For Safari */
+  animation: pulseText 2s infinite;
+  display: flex;
+  justify-content: center;
+
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Progress bar */
+.progress-bar-container {
+  margin-top: 20px;
+  width: 220px;
+  height: 3px;
+  background-color: rgba(0, 255, 127, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #00FF7F, #00FFB3);
+  animation: loadingBar 3s ease-in-out forwards;
+}
+
+@keyframes loadingBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
