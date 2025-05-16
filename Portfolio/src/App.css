@@ -4,3 +4,10 @@ body{
 }
 
 
+.bg-dark-bg {
+  background-color: #0d0d0d;
+}
+
+.bg-primary {
+  background-color: #00ffcc; /* Change to your accent color */
+}

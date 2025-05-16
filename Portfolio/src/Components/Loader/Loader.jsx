@@ -1,4 +1,4 @@
-// src/Components/Loader/Loader.jsx
+
 import React, { useEffect } from 'react';
 import './Loader.css'; // Make sure this CSS file exists
 
@@ -56,3 +56,45 @@ const Loader = ({ onFinish }) => {
 };
 
 export default Loader;
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { motion } from 'framer-motion';
+
+// const Loader = ({ onFinish }) => {
+//   const [typedText, setTypedText] = useState('');
+//   const fullName = 'ARYA PATEL';
+
+//   useEffect(() => {
+//     let index = 0;
+
+//     const interval = setInterval(() => {
+//       if (index < fullName.length) {
+//         setTypedText((prev) => prev + fullName[index]);
+//         index++;
+//       } else {
+//         clearInterval(interval);
+//         setTimeout(onFinish, 2000); // Fade out after delay
+//       }
+//     }, 150);
+
+//     return () => clearInterval(interval);
+//   }, [onFinish]);
+
+//   return (
+//     <motion.div
+//       initial={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//       transition={{ duration: 1 }}
+//       className="fixed inset-0 flex items-center justify-center bg-black text-white"
+//     >
+//       <h1 key={typedText} className="text-4xl md:text-6xl font-bold tracking-widest">
+//         {typedText}
+//         <span className="animate-pulse">|</span>
+//       </h1>
+//     </motion.div>
+//   );
+// };
+
+// export default Loader;

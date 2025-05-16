@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-// import CustomCursor from './Components/CustomCursor/CustomCursor';
+
 import Loader from './Components/Loader/Loader';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
@@ -17,12 +17,12 @@ function App() {
   return (
     <>
 
+      {/* New loader shown during loading */}
+      {loading && <Loader onFinish={() => setLoading(false)} />}
 
-      {/* Loader shown while loading */}
-      {loading ? (
-        <Loader onFinish={() => setLoading(false)} />
-      ) : (
-        <div className="app-content">
+      {/* Main content shown after loader finishes */}
+      {/* {!loading && ( */}
+        <>
           <Navbar />
           <Hero />
           <About />
@@ -30,8 +30,8 @@ function App() {
           <Projects />
           <Contact />
           <Footer />
-        </div>
-      )}
+        </>
+      {/* )} */}
     </>
   );
 }

@@ -117,124 +117,25 @@
 
 
 
-// import React, { useState } from 'react';
-// import { motion } from 'framer-motion';
-// import GooeyNav from './GooeyNav.jsx'; // Ensure this is mobile-friendly or use fallback
-
-// const Navbar = () => {
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-//   const navItems = [
-//     { label: "Home", href: "#home" },
-//     { label: "About", href: "#about" },
-//     { label: "Skills", href: "#skills" },
-//     { label: "Projects", href: "#projects" },
-//     { label: "Contact", href: "#contact" },
-//   ];
-
-//   return (
-//     <nav className="fixed top-0 left-0 w-full z-50 bg-black shadow-md">
-//       {/* Container */}
-//       <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-//         {/* Logo */}
-//         <motion.div
-//           initial={{ opacity: 0, x: -20 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.5 }}
-//           className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600"
-//         >
-//           AP
-//         </motion.div>
-
-//         {/* Desktop GooeyNav */}
-//         <div className="hidden md:block">
-//           <GooeyNav
-//             items={navItems}
-//             animationTime={800}
-//             particleCount={20}
-//             particleDistances={[100, 20]}
-//             particleR={150}
-//             timeVariance={400}
-//             colors={[1, 2, 3, 4]}
-//             initialActiveIndex={0}
-//           />
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <div className="md:hidden">
-//           <button
-//             className="text-white focus:outline-none"
-//             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-//           >
-//             {/* Hamburger icon */}
-//             <svg
-//               className="w-6 h-6"
-//               fill="none"
-//               stroke="currentColor"
-//               viewBox="0 0 24 24"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth={2}
-//                 d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-//               />
-//             </svg>
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu Items */}
-//       {isMobileMenuOpen && (
-//         <div className="md:hidden bg-black px-6 pb-4">
-//           <ul className="flex flex-col space-y-4">
-//             {navItems.map((item, index) => (
-//               <li key={index}>
-//                 <a
-//                   href={item.href}
-//                   className="block text-white hover:text-green-400 transition-colors"
-//                   onClick={() => setIsMobileMenuOpen(false)} // close menu after click
-//                 >
-//                   {item.label}
-//                 </a>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import GooeyNav from './GooeyNav.jsx'; // Import the GooeyNav component
+import GooeyNav from './GooeyNav.jsx'; // Ensure this is mobile-friendly or use fallback
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "/home" },
-    { label: "About", href: "/about" },
-    { label: "Skills", href: "/skills" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
   ];
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black shadow-md">
-      {/* Container for Navbar */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      {/* Container */}
+      <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -242,27 +143,11 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600"
         >
-          MyPortfolio
+          AP
         </motion.div>
 
-        {/* Hamburger Menu for Mobile */}
-        <button
-          className="lg:hidden text-white focus:outline-none"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-            />
-          </svg>
-        </button>
-
-        {/* Navigation Links */}
-        <div className={`lg:flex ${isMenuOpen ? 'block' : 'hidden'} absolute lg:static top-16 left-0 w-full lg:w-auto bg-black lg:bg-transparent`}>
+        {/* Desktop GooeyNav */}
+        <div className="hidden md:block">
           <GooeyNav
             items={navItems}
             animationTime={800}
@@ -272,12 +157,127 @@ const Navbar = () => {
             timeVariance={400}
             colors={[1, 2, 3, 4]}
             initialActiveIndex={0}
-            className="flex flex-col lg:flex-row items-center justify-center w-full lg:w-auto py-4 lg:py-0 space-y-4 lg:space-y-0 lg:space-x-6"
           />
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            className="text-white focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {/* Hamburger icon */}
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Items */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-black px-6 pb-4">
+          <ul className="flex flex-col space-y-4">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <a
+                  href={item.href}
+                  className="block text-white hover:text-green-400 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)} // close menu after click
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
 
 export default Navbar;
+
+
+
+
+// import React, { useState } from 'react';
+// import { motion } from 'framer-motion';
+// import GooeyNav from './GooeyNav.jsx'; // Import the GooeyNav component
+
+// const Navbar = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const navItems = [
+//     { label: "Home", href: "/home" },
+//     { label: "About", href: "/about" },
+//     { label: "Skills", href: "/skills" },
+//     { label: "Projects", href: "/projects" },
+//     { label: "Contact", href: "/contact" },
+//   ];
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+//   return (
+//     <nav className="fixed top-0 left-0 w-full z-50 bg-black shadow-md">
+//       {/* Container for Navbar */}
+//       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+//         {/* Logo */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -20 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.5 }}
+//           className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600"
+//         >
+//           MyPortfolio
+//         </motion.div>
+
+//         {/* Hamburger Menu for Mobile */}
+//         <button
+//           className="lg:hidden text-white focus:outline-none"
+//           onClick={toggleMenu}
+//           aria-label="Toggle menu"
+//         >
+//           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+//             <path
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//               strokeWidth="2"
+//               d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+//             />
+//           </svg>
+//         </button>
+
+//         {/* Navigation Links */}
+//         <div className={`lg:flex ${isMenuOpen ? 'block' : 'hidden'} absolute lg:static top-16 left-0 w-full lg:w-auto bg-black lg:bg-transparent`}>
+//           <GooeyNav
+//             items={navItems}
+//             animationTime={800}
+//             particleCount={20}
+//             particleDistances={[100, 20]}
+//             particleR={150}
+//             timeVariance={400}
+//             colors={[1, 2, 3, 4]}
+//             initialActiveIndex={0}
+//             className="flex flex-col lg:flex-row items-center justify-center w-full lg:w-auto py-4 lg:py-0 space-y-4 lg:space-y-0 lg:space-x-6"
+//           />
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
