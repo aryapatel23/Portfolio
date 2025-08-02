@@ -4,7 +4,7 @@ import { GraduationCap, Code, BookOpen, Award, Sparkles } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-black relative overflow-hidden">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
       {/* Floating Particles Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {[...Array(20)].map((_, index) => (
@@ -39,7 +39,7 @@ const About = () => {
           className="space-y-8 text-center md:text-left"
         >
           {/* Title */}
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-black leading-tight">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Me</span>
           </h2>
 
@@ -55,14 +55,14 @@ const About = () => {
             >
               <div className="flex items-center gap-2 text-green-600" aria-label="Passionate Web Developer Section">
                 <Code className="h-8 w-8" aria-hidden="true" />
-                <h3 className="text-xl md:text-2xl font-bold text-white">Passionate Web Developer</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-black">Passionate Web Developer</h3>
               </div>
-              <p className="text-white leading-relaxed">
+              <p className="text-black leading-relaxed">
                 I am a dedicated Computer Science student with a passion for creating innovative web solutions. 
                 My journey in tech has equipped me with both frontend and backend development skills, 
                 allowing me to build complete, user-centric applications.
               </p>
-              <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-white">
+              <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-black">
                 <li>Proficient in HTML, CSS, JavaScript, and React</li>
                 <li>Experienced with backend technologies like Node.js and Express</li>
                 <li>Skilled in database management using MongoDB and SQL</li>
@@ -79,7 +79,7 @@ const About = () => {
             >
               <div className="flex items-center gap-2 text-green-600" aria-label="Education Section">
                 <GraduationCap className="h-8 w-8" aria-hidden="true" />
-                <h3 className="text-xl md:text-2xl font-bold text-white">Education</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-black">Education</h3>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <h4 className="font-semibold text-xl text-gray-800">Rai University X CodingGita</h4>

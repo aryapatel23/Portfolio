@@ -23,13 +23,18 @@ function App() {
       {/* Main content shown after loader finishes */}
       {/* {!loading && ( */}
         <>
+            <div className="flex">
+
           <Navbar />
+          <div className="flex-1 pl-20">
           <Hero />
           <About />
           <Skills />
           <Projects />
           <Contact />
           <Footer />
+          </div>
+          </div>
         </>
       {/* )} */}
     </>

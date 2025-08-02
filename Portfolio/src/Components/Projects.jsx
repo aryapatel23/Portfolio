@@ -1019,7 +1019,7 @@ const Projects = () => {
     : filteredProjects.slice(0, 5);
 
   return (
-    <section id="projects" className="py-20 bg-black text-white relative overflow-hidden">
+    <section id="projects" className="py-20 bg-white text-white relative overflow-hidden">
       {/* Floating Particles Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {[...Array(30)].map((_, index) => (
@@ -1053,7 +1053,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="space-y-12 text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-black leading-tight">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Projects</span>
           </h2>
         </motion.div>
@@ -1146,7 +1146,7 @@ const Projects = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-3xl font-bold text-white mb-2">
+                  <h3 className="text-3xl font-bold text-black mb-2">
                     {project.title}
                   </h3>
                   <div className="bg-white p-6 rounded-lg shadow-md border border-gray-300 mb-4">

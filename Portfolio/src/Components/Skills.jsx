@@ -53,7 +53,7 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-black relative overflow-hidden">
+    <section id="skills" className="py-20 bg-white relative overflow-hidden">
       {/* Floating Particles Background */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {[...Array(30)].map((_, index) => (
@@ -88,7 +88,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="space-y-12 text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-black leading-tight">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">Skills</span>
           </h2>
         </motion.div>

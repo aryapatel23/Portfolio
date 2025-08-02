@@ -5,11 +5,8 @@ import Typewriter from 'typewriter-effect';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
+    <section id="home" className="pt-20 min-h-screen flex items-center justify-center bg-white relative overflow-hidden">
       {/* Unique Background */}
-      <div
-        className="absolute inset-0 w-full h-full bg-[url('https://res.cloudinary.com/dzsvjyg2c/image/upload/v1743840141857/bg-hero.jpg')] bg-cover bg-center bg-blend-overlay bg-black/50 z-0"
-      ></div>
 
       {/* Floating Particles */}
       <div className="absolute inset-0 z-10 pointer-events-none">
@@ -45,13 +42,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="space-y-8"
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold black leading-tight">
             Hi, I'm{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">
               Arya Patel
             </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-300 font-medium">
+          <h2 className="text-2xl md:text-3xl text-black font-medium">
             <Typewriter
               options={{
                 strings: ['Web Developer', 'Problem Solver', 'UI/UX Enthusiast'],
@@ -64,11 +61,11 @@ const HeroSection = () => {
           <div className="space-y-4 text-gray-400">
             <div className="flex items-center gap-2">
               <Mail className="h-5 w-5 text-green-500" />
-              <span className="text-sm md:text-base">aryapatel.cg@gmail.com</span>
+              <span className="text-sm md:text-black">aryapatel.cg@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-green-500" />
-              <span className="text-sm md:text-base">Gujarat, India</span>
+              <span className="text-sm md:text-black">Gujarat, India</span>
             </div>
             <div className="flex space-x-4 text-black">
                         <a href="https://github.com/aryapatel23" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-green-500 transition-colors">
